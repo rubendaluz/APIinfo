@@ -18,16 +18,17 @@ let noticias = {
         document.querySelector(".image").src = image
         document.querySelector(".title").innerText = title
         document.querySelector(".description").innerText = description
-        document.querySelector(".url").innerText = url
+        //document.querySelector(".url").innerText = url
     },
 
     search: function(){
         this.fetchnoticias(document.getElementById("search-bar").value)
     }
 };
+
 document.querySelector("#busca").addEventListener("click", function(){
     noticias.search();
-})
+});
 
 document.querySelector("#search-bar").addEventListener("keyup", function (event) {
     if (event.key == "Enter") {
@@ -35,6 +36,6 @@ document.querySelector("#search-bar").addEventListener("keyup", function (event)
     }
 });
 
-noticias.fetchnoticias("Tesla");
+noticias.fetchnoticias();
 
 
