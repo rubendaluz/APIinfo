@@ -14,18 +14,20 @@ let noticias = {
         const url = data.articles[i].url;
         const image = data.articles[i].urlToImage;
         console.log(data, title, description, url,image)
+
+        document.querySelector(".image").src = image
+        document.querySelector(".title").innerText = title
+        document.querySelector(".description").innerText = description
+        document.querySelector(".url").innerText = url
     },
 
     search: function(){
         this.fetchnoticias(document.getElementById("search-bar").value)
     }
 };
-
-const btn = document.getElementById("busca")
-btn.addEventListener("click", function(e){
-    e.preventDefault;
+document.querySelector("#busca").addEventListener("click", function(){
     noticias.search();
-});
+})
 
 document.querySelector("#search-bar").addEventListener("keyup", function (event) {
     if (event.key == "Enter") {

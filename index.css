@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman';
 }
 
 .form{
@@ -20,6 +21,12 @@
     padding: 10px 20px;
     width: calc(100%-75%);
     background-color: #7c7c7c2b;
+}
+
+.subject{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .newcard{
